@@ -4,15 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="func.js"></script>
 		<link rel="stylesheet" href="style.css" />
 		<title>TrainYourBody</title>
 	</head>
-	<body>
+	<body class="row">
 		<nav class="navigation">
 			<ul>
-				<li><a href="exercises.html">Exercises</a></li>
 				<li>
-					<a href="index.html"
+					<a href="exercises.html" class="col-4 col-s-12">Exercises</a>
+				</li>
+				<li>
+					<a href="index.html" class="col-4 col-s-12"
 						><img
 							id="logo"
 							src="Photos/logoR1.png"
@@ -21,74 +24,215 @@
 							height="91px"
 					/></a>
 				</li>
-				<li><a id="aboutUs" href="aboutUs.html">About us</a></li>
+				<li>
+					<a id="aboutUs" href="aboutUs.html" class="col-4 col-s-12"
+						>About us</a
+					>
+				</li>
 			</ul>
 		</nav>
 		<main>
 			<header>
+				<!-- About us section -->
+				<div class="aboutUsSection">
+					<span class="aboutUsSection col-12 col-s-12">
+						<h4 class="aboutUsSection col-12 col-s-12">Welcome</h4>
+						Welcome to our website dedicated to exercises and building muscles!
+						Our mission is to provide you with the most reliable and up-to-date
+						information on how to achieve your fitness goals.
+					</span>
+					<span class="aboutUsSection col-12 col-s-12">
+						<h4 class="aboutUsSection col-12 col-s-12">Who are we ?</h4>
+						We are a team of fitness enthusiasts and professionals who are
+						passionate about helping others improve their physical health and
+						well-being. Our team consists of certified personal trainers,
+						nutritionists, and other experts in the field of fitness.
+					</span>
+					<span class="aboutUsSection col-12 col-s-12">
+						<h4 class="aboutUsSection col-12 col-s-12">Our website</h4>
+						Through our website, we aim to provide you with comprehensive
+						information on various exercises and workouts that can help you
+						build muscle mass and achieve your desired physique. From
+						weightlifting and bodyweight exercises to cardio and flexibility
+						training, we cover a wide range of fitness topics to help you
+						develop a well-rounded exercise routine. Our website is designed to
+						be a valuable resource for people of all fitness levels, from
+						beginners to advanced athletes.
+					</span>
+					<span class="aboutUsSection col-12 col-s-12">
+						<h4 class="aboutUsSection col-12 col-s-12">Thanks!!!</h4>
+						Thank you for visiting our website, and we hope you find our content
+						informative and helpful. If you have any questions or suggestions,
+						please feel free to contact us.
+					</span>
+				</div>
+			</header>
+			<header>
 				<div id="arms" class="exer">
-					<div class="exerPhoto">
+					<div class="exerPhoto col-3 col-s-12" onclick="showArmsDesc()">
 						<img src="Photos/armsPhoto1.jpg" alt="Arms exercise photo" />
 					</div>
-					<div class="exerText">
+					<div class="exerText col-9 col-s-12" onclick="showArmsDesc()">
 						<p>
 							Arm exercises are an essential part of any workout routine. They
 							help to build and tone the muscles in your arms, which can improve
 							your overall strength and appearance. There are many different
 							exercises that you can do to work your arms, including:
 						</p>
+						<div class="col-9 col-s-12 center">
+							<img
+								src="Photos/clickIco.png"
+								alt="click icon"
+								class="clickIcoSize"
+							/>
+						</div>
+					</div>
+
+					<div id="armsDesc" class="col-9 col-s-12">
+						<!-- Slideshow container -->
+						<div class="slideshow-container">
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 3</div>
+								<img
+									src="Photos/bicepsCurls.jpg"
+									style="width: 100%"
+									class="transPhoto"
+								/>
+								<div class="text textShadow">
+									This exercise targets the biceps, which are the muscles on the
+									front of your upper arm. Hold a dumbbell in each hand with
+									your palms facing up. Keep your elbows close to your body and
+									curl the weights up towards your shoulders. Lower the weights
+									back down to the starting position and repeat.
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 3</div>
+								<img
+									src="Photos/tricepsDips.jpg"
+									style="width: 100%"
+									class="transPhoto"
+								/>
+								<div class="text textShadow">
+									This exercise targets the triceps, which are the muscles on
+									the back of your upper arm. Sit on the edge of a chair or
+									bench with your hands placed next to your hips. Slide your
+									butt off the chair and lower yourself down towards the floor,
+									bending your elbows. Push yourself back up to the starting
+									position and repeat.
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 3</div>
+								<img
+									src="Photos/shoulderPress.jpg"
+									style="width: 100%"
+									class="transPhoto"
+								/>
+								<div class="text textShadow">
+									This exercise targets the shoulders. Hold a dumbbell in each
+									hand at shoulder height with your palms facing forward. Press
+									the weights up towards the ceiling, keeping your elbows close
+									to your body. Lower the weights back down to the starting
+									position and repeat.
+								</div>
+							</div>
+
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br />
+
+						<!-- The dots/circles -->
+						<div style="text-align: center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+						</div>
 					</div>
 				</div>
 				<div id="chest" class="exer">
-					<div class="exerPhoto">
+					<div class="exerPhoto col-3 col-s-12">
 						<img src="Photos/chestPhoto1.jpg" alt="Chest exercise photo" />
 					</div>
-					<div class="exerText">
+					<div class="exerText col-9 col-s-12">
 						<p>
 							Arm exercises are an essential part of any workout routine. They
 							help to build and tone the muscles in your arms, which can improve
 							your overall strength and appearance. There are many different
 							exercises that you can do to work your arms, including:
 						</p>
+						<div class="col-9 col-s-12 center">
+							<img
+								src="Photos/clickIco.png"
+								alt="click icon"
+								class="clickIcoSize"
+							/>
+						</div>
 					</div>
 				</div>
 				<div id="abs" class="exer">
-					<div class="exerPhoto">
+					<div class="exerPhoto col-3 col-s-12">
 						<img src="Photos/stomachPhoto1.jpg" alt="Abs exercise" />
 					</div>
-					<div class="exerText">
+					<div class="exerText col-9 col-s-12">
 						<p>
 							Arm exercises are an essential part of any workout routine. They
 							help to build and tone the muscles in your arms, which can improve
 							your overall strength and appearance. There are many different
 							exercises that you can do to work your arms, including:
 						</p>
+						<div class="col-9 col-s-12 center">
+							<img
+								src="Photos/clickIco.png"
+								alt="click icon"
+								class="clickIcoSize"
+							/>
+						</div>
 					</div>
 				</div>
 				<div id="back" class="exer">
-					<div class="exerPhoto">
+					<div class="exerPhoto col-3 col-s-12">
 						<img src="Photos/backPhoto1.jpg" alt="Back exercise" />
 					</div>
-					<div class="exerText">
+					<div class="exerText col-9 col-s-12">
 						<p>
 							Arm exercises are an essential part of any workout routine. They
 							help to build and tone the muscles in your arms, which can improve
 							your overall strength and appearance. There are many different
 							exercises that you can do to work your arms, including:
 						</p>
+						<div class="col-9 col-s-12 center">
+							<img
+								src="Photos/clickIco.png"
+								alt="click icon"
+								class="clickIcoSize"
+							/>
+						</div>
 					</div>
 				</div>
 				<div id="legs" class="exer">
-					<div class="exerPhoto">
+					<div class="exerPhoto col-3 col-s-12">
 						<img src="Photos/LegsPhoto1.jpg" alt="Legs exercise" />
 					</div>
-					<div class="exerText">
+					<div class="exerText col-9 col-s-12">
 						<p>
 							Arm exercises are an essential part of any workout routine. They
 							help to build and tone the muscles in your arms, which can improve
 							your overall strength and appearance. There are many different
 							exercises that you can do to work your arms, including:
 						</p>
+						<div class="col-9 col-s-12 center">
+							<img
+								src="Photos/clickIco.png"
+								alt="click icon"
+								class="clickIcoSize"
+							/>
+						</div>
 					</div>
 				</div>
 			</header>
