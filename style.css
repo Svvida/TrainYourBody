@@ -7,6 +7,10 @@ body {
 	height: 100%;
 }
 
+#armsDesc {
+	display: none;
+}
+
 .navigation {
 	border-bottom: solid black 1px;
 	font-size: 20px;
@@ -30,28 +34,36 @@ body {
 	text-shadow: 2px 2px #000000;
 }
 
+.navigation li {
+	transition: all 2s;
+}
+.navigation li:hover {
+	transform: scale(1.3);
+}
 .exer {
-	/* height: 20%;
-	width: 100%; */
+	height: 20%;
+	width: 100%;
 	border: solid #000000 1px;
-	/* justify-content: center;
+	justify-content: center;
 	display: flex;
 	align-items: flex-start;
 	position: relative;
-	flex-wrap: wrap; */
+	flex-wrap: wrap;
 	padding: 5px;
 	padding-bottom: 7px;
 }
 
-.exerColumns {
+.exerText {
+	height: 100%;
 	display: grid;
-	grid-template-columns: auto auto;
 }
-
 .exerPhoto img {
 	height: 100%;
 	width: 100%;
-	/* padding: 2%; */
+	transition: all 2s;
+}
+.exerPhoto img:hover {
+	opacity: 0.6;
 }
 
 .exerText p {
@@ -59,9 +71,26 @@ body {
 	margin-top: 2%;
 	margin-bottom: 2%;
 }
+.exerColumns {
+	display: grid;
+	grid-template-columns: auto auto;
+	position: relative;
+}
 
-#armsDesc {
-	display: none;
+.clickIcoStyle {
+	display: flex;
+	align-self: start;
+	justify-content: center;
+}
+.clickIcoStyle img {
+	transition: all 2s;
+}
+.clickIcoStyle img:hover {
+	transform: scale(1.3);
+}
+.clickIcoSize {
+	width: 5%;
+	height: 5%;
 }
 
 .textShadow {
@@ -71,46 +100,8 @@ body {
 }
 /* ************************************* */
 /* Slideshow container */
-.slideshow-container {
-	max-width: 1000px;
-	position: relative;
-	margin: auto;
-}
 
-/* Hide the images by default */
-.mySlides {
-	display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -22px;
-	padding: 16px;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-}
-
+/* ************************************* */
 /* Caption text */
 .text {
 	color: #f2f2f2;
@@ -147,7 +138,14 @@ body {
 .dot:hover {
 	background-color: #717171;
 }
+
+.defaultPhoto {
+	display: contents;
+}
 /* ************************************* */
+/* ************************************* */
+/* key frames || animations*/
+
 /* Fading animation */
 .fade {
 	animation-name: fade;
@@ -162,6 +160,7 @@ body {
 		opacity: 1;
 	}
 }
+/* ************************************* */
 /* ************************************* */
 
 .aboutUsSection h4 {
@@ -188,11 +187,8 @@ body {
 	);
 }
 /* ************************************* */
-.clickIcoSize {
-	width: 5%;
-	height: 5%;
-}
-
+/* ************************************* */
+/* Media querries */
 @media only screen and (max-width: 480px) {
 	/* For mobile: */
 	.navigation ul li {
@@ -211,6 +207,16 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	.exerText {
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto;
+	}
+	.clickIcoStyle {
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+	}
 }
 @media only screen and (max-width: 768px) {
 	/* For tablets: */
@@ -228,3 +234,6 @@ body {
 @media only screen and (min-width: 769px) {
 	/* For desktop: */
 }
+
+/* ************************************* */
+/* ************************************* */
