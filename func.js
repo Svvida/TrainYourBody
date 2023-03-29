@@ -1,41 +1,66 @@
-function showArmsDesc() {
-	x = document.getElementById("armsDesc");
-	if (x.style.display === "none" || x.style.display === "") {
-		x.style.display = "block";
-	} else {
-		x.style.display = "none";
-	}
+const arms = document.querySelector("#armsMain");
+const armsDesc = document.querySelector(".armsDesc");
+const chest = document.querySelector("#chestMain");
+const chestDesc = document.querySelector(".chestDesc");
+const abs = document.querySelector("#absMain");
+const absDesc = document.querySelector(".absDesc");
+const back = document.querySelector("#backMain");
+const backDesc = document.querySelector(".backDesc");
+const legs = document.querySelector("#legsMain");
+const legsDesc = document.querySelector(".legsDesc");
+
+function showDiv(toClick, toShow) {
+	toClick.addEventListener("click", function () {
+		if (toShow.style.display != "block") toShow.style.display = "block";
+		else toShow.style.display = "none";
+	});
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
+showDiv(arms, armsDesc);
+showDiv(chest, chestDesc);
+showDiv(abs, absDesc);
+showDiv(back, backDesc);
+showDiv(legs, legsDesc);
 
-// Next/previous controls
-function plusSlides(n) {
-	showSlides((slideIndex += n));
+/**************************************************/
+//Scrolling to choosen element
+const aboutUs = document.querySelector("#aboutUs");
+const exercises = document.querySelector("#exercises");
+
+const aboutUsSection = document.querySelector(".aboutUsSection");
+
+function ScrollTo(from, to) {
+	from.addEventListener("click", function () {
+		to.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+			inline: "nearest",
+		});
+	});
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-	showSlides((slideIndex = n));
+ScrollTo(aboutUs, aboutUsSection);
+ScrollTo(exercises, arms);
+/**************************************************/
+
+//Playing audio when clicking on p
+function audioPlay() {
+	const audio = document.getElementById("manRoarAudio");
+	audio.play();
 }
 
-function showSlides(n) {
-	let i;
-	let slides = document.getElementsByClassName("mySlides");
-	let dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {
-		slideIndex = 1;
-	}
-	if (n < 1) {
-		slideIndex = slides.length;
-	}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
-	}
-	slides[slideIndex - 1].style.display = "block";
-	dots[slideIndex - 1].className += " active";
-}
+/**************************************************/
+const imgs = document.querySelectorAll(".gallery img");
+const fullPage = document.querySelector(".fullpage");
+
+imgs.forEach((img) => {
+	img.addEventListener("click", function () {
+		fullPage.style.backgroundImage = "url(" + img.src + ")";
+		fullPage.style.display = "block";
+	});
+});
+
+//Hiding full size photo
+fullPage.addEventListener("click", function () {
+	this.style.display = "none";
+});

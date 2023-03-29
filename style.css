@@ -1,14 +1,13 @@
 * {
 	box-sizing: border-box;
+	font-family: "Rubik", sans-serif;
 }
 
 body {
 	background-color: gray;
 	height: 100%;
-}
-
-#armsDesc {
-	display: none;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 .navigation {
@@ -28,21 +27,40 @@ body {
 	flex-wrap: wrap;
 }
 
-.navigation a {
-	text-decoration: none;
-	color: white;
-	text-shadow: 2px 2px #000000;
-}
-
 .navigation li {
 	transition: all 2s;
+	color: white;
+	text-shadow: 2px 2px #000000;
 }
 .navigation li:hover {
 	transform: scale(1.3);
 }
+#mainPhoto {
+	height: 90vh;
+	width: 100vw;
+}
+#mainPhoto img {
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+}
+
+.mainPhotoContainer {
+	position: relative;
+}
+
+.mainPhotoText {
+	position: absolute;
+	top: 8px;
+	left: 16px;
+}
+.mainPhotoText img {
+	width: 10%;
+	height: 10%;
+}
 .exer {
 	height: 20%;
-	width: 100%;
+	width: 100vw;
 	border: solid #000000 1px;
 	justify-content: center;
 	display: flex;
@@ -99,8 +117,6 @@ body {
 	text-shadow: 2px 2px #000000;
 }
 /* ************************************* */
-/* Slideshow container */
-
 /* ************************************* */
 /* Caption text */
 .text {
@@ -120,27 +136,6 @@ body {
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-	background-color: #717171;
-}
-
-.defaultPhoto {
-	display: contents;
 }
 /* ************************************* */
 /* ************************************* */
@@ -187,6 +182,48 @@ body {
 	);
 }
 /* ************************************* */
+
+/* ************************************* */
+
+.displayNone {
+	display: none;
+}
+
+.hiddenDiv {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-items: center;
+	align-items: center;
+}
+
+.hiddenDiv img {
+	width: 90%;
+	height: 90%;
+	padding: 5px;
+}
+
+.fullpage {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: black;
+}
+
+.infoText {
+	display: flex;
+	justify-content: center;
+	align-self: flex-end;
+	color: darkgray;
+	font-style: italic;
+}
+
 /* ************************************* */
 /* Media querries */
 @media only screen and (max-width: 480px) {
@@ -217,6 +254,10 @@ body {
 		display: flex;
 		align-items: flex-end;
 	}
+	.hiddenDiv {
+		display: grid;
+		grid-template-columns: auto;
+	}
 }
 @media only screen and (max-width: 768px) {
 	/* For tablets: */
@@ -230,10 +271,13 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	.hiddenDiv {
+		display: grid;
+		grid-template-columns: auto;
+	}
 }
 @media only screen and (min-width: 769px) {
 	/* For desktop: */
 }
 
-/* ************************************* */
 /* ************************************* */

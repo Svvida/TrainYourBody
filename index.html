@@ -4,33 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="func.js"></script>
+		<script src="func.js" defer></script>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+			rel="stylesheet"
+		/>
 		<title>TrainYourBody</title>
 	</head>
 	<body>
 		<nav class="navigation">
 			<ul>
-				<li>
-					<a href="exercises.html" class="growingText">Exercises</a>
+				<li id="exercises" class="growingText">Exercises</li>
+				<li id="logo">
+					<img
+						id="logo"
+						src="Photos/logoR1.png"
+						alt="Logo"
+						width="200px"
+						height="91px"
+					/>
 				</li>
-				<li>
-					<a href="index.html"
-						><img
-							id="logo"
-							src="Photos/logoR1.png"
-							alt="Logo"
-							width="200px"
-							height="91px"
-					/></a>
-				</li>
-				<li>
-					<a id="aboutUs" href="aboutUs.html" class="growingText">About us</a>
-				</li>
+				<li id="aboutUs" class="growingText">About us</li>
 			</ul>
 		</nav>
 		<main>
-			<header>
+			<div class="mainPhotoContainer">
+				<img
+					src="Photos/mainPhoto.jpg"
+					alt=""
+					onclick="audioPlay()"
+					id="mainPhoto"
+				/>
+				<div class="mainPhotoText">
+					<img src="Photos/sound1.png" alt="" />
+				</div>
+				<audio id="manRoarAudio">
+					<source src="Audio/manRoar.mp3" type="audio/mpeg" />
+				</audio>
+			</div>
+			<section>
 				<!-- About us section -->
 				<div class="center aboutUsSection">
 					<span class="center">
@@ -64,14 +79,14 @@
 						please feel free to contact us.
 					</span>
 				</div>
-			</header>
-			<header>
+			</section>
+			<section>
 				<div id="arms" class="exer">
-					<div class="exerColumns">
-						<div class="exerPhoto" onclick="showArmsDesc()">
+					<div id="armsMain" class="exerColumns">
+						<div class="exerPhoto">
 							<img src="Photos/armsPhoto1.jpg" alt="Arms exercise photo" />
 						</div>
-						<div class="exerText" onclick="showArmsDesc()">
+						<div class="exerText">
 							<p>
 								Arm exercises are an essential part of any workout routine. They
 								help to build and tone the muscles in your arms, which can
@@ -86,16 +101,20 @@
 									class="clickIcoSize"
 								/>
 							</div>
+							<div class="infoText">*You can click the photo below*</div>
 						</div>
 					</div>
-
-					<div id="armsDesc">
-						<!-- Slideshow container -->
-						<div class="sliderContainer"></div>
+					<div class="armsDesc displayNone">
+						<div class="hiddenDiv gallery">
+							<img src="Photos/bicepsCurls.jpg" alt="" />
+							<img src="Photos/shoulderPress.jpg" alt="" />
+							<img src="Photos/tricepsDips.jpg" alt="" />
+						</div>
+						<div class="fullpage"></div>
 					</div>
 				</div>
 				<div id="chest" class="exer">
-					<div class="exerColumns">
+					<div id="chestMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/chestPhoto1.jpg" alt="Chest exercise photo" />
 						</div>
@@ -114,11 +133,13 @@
 									class="clickIcoSize"
 								/>
 							</div>
+							<div class="infoText">*You can click the photo below*</div>
 						</div>
 					</div>
+					<div class="chestDesc displayNone hiddenDiv">Test TEst test</div>
 				</div>
 				<div id="abs" class="exer">
-					<div class="exerColumns">
+					<div id="absMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/stomachPhoto1.jpg" alt="Abs exercise" />
 						</div>
@@ -137,11 +158,13 @@
 									class="clickIcoSize"
 								/>
 							</div>
+							<div class="infoText">*You can click the photo below*</div>
 						</div>
 					</div>
+					<div class="absDesc displayNone hiddenDiv">Test TEst test</div>
 				</div>
 				<div id="back" class="exer">
-					<div class="exerColumns">
+					<div id="backMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/backPhoto1.jpg" alt="Back exercise" />
 						</div>
@@ -160,11 +183,13 @@
 									class="clickIcoSize"
 								/>
 							</div>
+							<div class="infoText">*You can click the photo below*</div>
 						</div>
 					</div>
+					<div class="backDesc displayNone hiddenDiv">Test TEst test</div>
 				</div>
 				<div id="legs" class="exer">
-					<div class="exerColumns">
+					<div id="legsMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/LegsPhoto1.jpg" alt="Legs exercise" />
 						</div>
@@ -183,10 +208,12 @@
 									class="clickIcoSize"
 								/>
 							</div>
+							<div class="infoText">*You can click the photo below*</div>
 						</div>
 					</div>
+					<div class="legsDesc displayNone hiddenDiv">Test TEst test</div>
 				</div>
-			</header>
+			</section>
 		</main>
 		<footer></footer>
 	</body>
