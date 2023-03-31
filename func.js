@@ -1,16 +1,17 @@
 const arms = document.querySelector("#armsMain");
-const armsDesc = document.querySelector(".armsDesc");
+const armsDesc = document.querySelector("#armsDesc");
 const chest = document.querySelector("#chestMain");
-const chestDesc = document.querySelector(".chestDesc");
+const chestDesc = document.querySelector("#chestDesc");
 const abs = document.querySelector("#absMain");
-const absDesc = document.querySelector(".absDesc");
+const absDesc = document.querySelector("#absDesc");
 const back = document.querySelector("#backMain");
-const backDesc = document.querySelector(".backDesc");
+const backDesc = document.querySelector("#backDesc");
 const legs = document.querySelector("#legsMain");
-const legsDesc = document.querySelector(".legsDesc");
+const legsDesc = document.querySelector("#legsDesc");
 
 function showDiv(toClick, toShow) {
 	toClick.addEventListener("click", function () {
+		console.log(toShow.style.display);
 		if (toShow.style.display != "block") toShow.style.display = "block";
 		else toShow.style.display = "none";
 	});
@@ -50,17 +51,23 @@ function audioPlay() {
 }
 
 /**************************************************/
+const gallery = document.querySelectorAll(".gallery");
 const imgs = document.querySelectorAll(".gallery img");
-const fullPage = document.querySelector(".fullpage");
+const fullpage = document.querySelector(".fullpage");
 
-imgs.forEach((img) => {
-	img.addEventListener("click", function () {
-		fullPage.style.backgroundImage = "url(" + img.src + ")";
-		fullPage.style.display = "block";
-	});
-});
+const divTest = document.createElement("div");
 
 //Hiding full size photo
-fullPage.addEventListener("click", function () {
-	this.style.display = "none";
+divTest.addEventListener("click", function () {
+	divTest.style.display = "none";
+});
+
+//displaying full size photo
+divTest.classList.add("fullpage");
+document.body.appendChild(divTest);
+imgs.forEach((img) => {
+	img.addEventListener("click", function () {
+		divTest.style.backgroundImage = "url(" + img.src + ")";
+		divTest.style.display = "block";
+	});
 });

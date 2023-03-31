@@ -75,6 +75,7 @@ body {
 	height: 100%;
 	display: grid;
 }
+
 .exerPhoto img {
 	height: 100%;
 	width: 100%;
@@ -213,7 +214,7 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-color: black;
+	background-color: rgb(153, 150, 150);
 }
 
 .infoText {
@@ -222,6 +223,7 @@ body {
 	align-self: flex-end;
 	color: darkgray;
 	font-style: italic;
+	padding: 5px;
 }
 
 /* ************************************* */
@@ -253,6 +255,7 @@ body {
 		width: 100%;
 		display: flex;
 		align-items: flex-end;
+		padding: 5px;
 	}
 	.hiddenDiv {
 		display: grid;
