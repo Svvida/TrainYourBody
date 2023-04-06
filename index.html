@@ -17,7 +17,7 @@
 	<body>
 		<nav class="navigation">
 			<ul>
-				<li id="exercises" class="growingText">Exercises</li>
+				<li id="exercises" class="growingText pointer">Exercises</li>
 				<li id="logo">
 					<img
 						id="logo"
@@ -27,42 +27,44 @@
 						height="91px"
 					/>
 				</li>
-				<li id="aboutUs" class="growingText">About us</li>
+				<li id="aboutUs" class="growingText pointer">About us</li>
 			</ul>
 		</nav>
-		<main>
+		<header>
 			<div class="mainPhotoContainer">
 				<img
-					src="Photos/mainPhoto.jpg"
+					src="Photos/mainPhotoT.png"
 					alt=""
 					onclick="audioPlay()"
 					id="mainPhoto"
 				/>
 				<div class="mainPhotoText">
-					<img src="Photos/sound1.png" alt="" />
+					<img src="Photos/icons/sound1.png" alt="" />
 				</div>
 				<audio id="manRoarAudio">
 					<source src="Audio/manRoar.mp3" type="audio/mpeg" />
 				</audio>
 			</div>
+		</header>
+		<main>
 			<section>
-				<!-- About us section -->
-				<div class="center aboutUsSection">
-					<span class="center">
-						<h4>Welcome</h4>
+				<!-- About us Section-->
+				<div id="aboutUsSection" class="center aboutUsSection">
+					<span class="center toShow">
+						<h3>Welcome</h3>
 						Welcome to our website dedicated to exercises and building muscles!
 						Our mission is to provide you with the most reliable and up-to-date
 						information on how to achieve your fitness goals.
 					</span>
-					<span class="center">
-						<h4>Who are we ?</h4>
+					<span class="center toShow">
+						<h3>Who are we ?</h3>
 						We are a team of fitness enthusiasts and professionals who are
 						passionate about helping others improve their physical health and
 						well-being. Our team consists of certified personal trainers,
 						nutritionists, and other experts in the field of fitness.
 					</span>
-					<span class="center">
-						<h4>Our website</h4>
+					<span class="center toShow">
+						<h3>Our website</h3>
 						Through our website, we aim to provide you with comprehensive
 						information on various exercises and workouts that can help you
 						build muscle mass and achieve your desired physique. From
@@ -72,171 +74,170 @@
 						be a valuable resource for people of all fitness levels, from
 						beginners to advanced athletes.
 					</span>
-					<span class="center">
-						<h4>Thanks!!!</h4>
-						Thank you for visiting our website, and we hope you find our content
-						informative and helpful. If you have any questions or suggestions,
-						please feel free to contact us.
-					</span>
 				</div>
 			</section>
 			<section>
-				<div id="arms" class="exer">
+				<div id="arms" class="exer toShow">
 					<div id="armsMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/armsPhoto1.jpg" alt="Arms exercise photo" />
 						</div>
-						<div class="exerText">
-							<h3 class="center">Arms</h3>
+						<div class="exerText center">
+							<h3>Arms</h3>
 							<p>
-								Arm exercises are an essential part of any workout routine. They
-								help to build and tone the muscles in your arms, which can
-								improve your overall strength and appearance. There are many
-								different exercises that you can do to work your arms,
-								including:
+								Arm exercises are exercises that specifically target the muscles
+								in the arms, which include the biceps, triceps, forearms, and
+								shoulders. These exercises are designed to strengthen and tone
+								the muscles in the upper body, which can improve overall
+								physical performance, increase muscle definition, and enhance
+								overall physical appearance.
 							</p>
-							<div class="clickIcoStyle">
-								<img
-									src="Photos/clickIco.png"
-									alt="click icon"
-									class="clickIcoSize"
-								/>
-							</div>
-							<div class="infoText">*You can click the photo below*</div>
+							<p>
+								Some common types of arm exercises include bicep curls, tricep
+								dips, shoulder presses, push-ups, and pull-ups.
+							</p>
 						</div>
 					</div>
 					<div id="armsDesc" class="displayNone">
-						<div class="hiddenDiv gallery">
+						<div class="infoText">*You can click the photo below*</div>
+						<div class="hiddenDiv gallery opaPhoto">
 							<img src="Photos/bicepsCurls.jpg" alt="" />
 							<img src="Photos/shoulderPress.jpg" alt="" />
 							<img src="Photos/tricepsDips.jpg" alt="" />
 						</div>
 					</div>
 				</div>
-				<div id="chest" class="exer">
+				<div id="chest" class="exer toShow">
 					<div id="chestMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/chestPhoto1.jpg" alt="Chest exercise photo" />
 						</div>
-						<div class="exerText">
+						<div class="exerText center">
+							<h3>Chest</h3>
 							<p>
-								A chest workout is a type of resistance training that targets
-								the muscles of the chest, including the pectoralis major and
-								pectoralis minor. A chest workout typically includes a
-								combination of exercises that involve pushing movements, such as
-								bench press, dumbbell press, and push-ups.
+								Chest exercises are exercises that specifically target the
+								muscles in the chest, which include the pectoralis major and
+								minor muscles. These exercises are designed to strengthen and
+								tone the muscles in the chest, which can improve overall upper
+								body strength, increase muscle definition, and enhance overall
+								physical appearance.
 							</p>
-							<div class="clickIcoStyle">
-								<img
-									src="Photos/clickIco.png"
-									alt="click icon"
-									class="clickIcoSize"
-								/>
-							</div>
-							<div class="infoText">*You can click the photo below*</div>
+							<p>
+								Some common types of chest exercises include bench presses,
+								push-ups, chest flyes, and dips.
+							</p>
 						</div>
 					</div>
 					<div id="chestDesc" class="displayNone">
-						<div class="hiddenDiv gallery">
+						<div class="infoText">*You can click the photo below*</div>
+						<div class="hiddenDiv gallery opaPhoto">
 							<img src="Photos/chestPh1.jpg" alt="" />
 							<img src="Photos/chestPh2.jpg" alt="" />
 							<img src="Photos/chestPh3.jpg" alt="" />
 						</div>
 					</div>
 				</div>
-				<div id="abs" class="exer">
+				<div id="abs" class="exer toShow">
 					<div id="absMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/stomachPhoto1.jpg" alt="Abs exercise" />
 						</div>
-						<div class="exerText">
+						<div class="exerText center">
+							<h3>Abs</h3>
 							<p>
-								Arm exercises are an essential part of any workout routine. They
-								help to build and tone the muscles in your arms, which can
-								improve your overall strength and appearance. There are many
-								different exercises that you can do to work your arms,
-								including:
+								Abdominal exercises are exercises that specifically target the
+								muscles in the abdominal area, which includes the rectus
+								abdominis, obliques, and transverse abdominis. These exercises
+								are designed to strengthen and tone the muscles in the core area
+								of the body, which can improve posture, balance, and overall
+								physical performance.
 							</p>
-							<div class="clickIcoStyle">
-								<img
-									src="Photos/clickIco.png"
-									alt="click icon"
-									class="clickIcoSize"
-								/>
-							</div>
-							<div class="infoText">*You can click the photo below*</div>
+							<p>
+								Some common types of abdominal exercises include crunches,
+								planks, Russian twists, sit-ups, and leg raises.
+							</p>
 						</div>
 					</div>
 					<div id="absDesc" class="displayNone">
-						<div class="hiddenDiv gallery">
-							<img src="Photos/bicepsCurls.jpg" alt="" />
-							<img src="Photos/shoulderPress.jpg" alt="" />
-							<img src="Photos/tricepsDips.jpg" alt="" />
+						<div class="infoText">*You can click the photo below*</div>
+						<div class="hiddenDiv gallery opaPhoto">
+							<img src="Photos/absPh1.jpg" alt="" />
+							<img src="Photos/absPh2.jpg" alt="" />
+							<img src="Photos/absPh3.jpg" alt="" />
 						</div>
 					</div>
 				</div>
-				<div id="back" class="exer">
+				<div id="back" class="exer toShow">
 					<div id="backMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/backPhoto1.jpg" alt="Back exercise" />
 						</div>
-						<div class="exerText">
+						<div class="exerText center">
+							<h3>Back</h3>
 							<p>
-								Arm exercises are an essential part of any workout routine. They
-								help to build and tone the muscles in your arms, which can
-								improve your overall strength and appearance. There are many
-								different exercises that you can do to work your arms,
-								including:
+								Back exercises are exercises that specifically target the
+								muscles in the back, which include the latissimus dorsi,
+								trapezius, rhomboids, erector spinae, and other smaller muscles.
+								These exercises are designed to strengthen and tone the muscles
+								in the upper, middle, and lower back, which can improve posture,
+								reduce the risk of back pain and injury, and enhance overall
+								physical performance.
 							</p>
-							<div class="clickIcoStyle">
-								<img
-									src="Photos/clickIco.png"
-									alt="click icon"
-									class="clickIcoSize"
-								/>
-							</div>
-							<div class="infoText">*You can click the photo below*</div>
+							<p>
+								Some common types of back exercises include pull-ups, lat
+								pulldowns, rows, back extensions, and hyperextensions.
+							</p>
 						</div>
 					</div>
 					<div id="backDesc" class="displayNone">
-						<div class="hiddenDiv gallery">
-							<img src="Photos/bicepsCurls.jpg" alt="" />
-							<img src="Photos/shoulderPress.jpg" alt="" />
-							<img src="Photos/tricepsDips.jpg" alt="" />
+						<div class="infoText">*You can click the photo below*</div>
+						<div class="hiddenDiv gallery opaPhoto">
+							<img src="Photos/backPh1.jpg" alt="" />
+							<img src="Photos/backPh2.jpg" alt="" />
+							<img src="Photos/backPh3.jpg" alt="" />
 						</div>
 					</div>
 				</div>
-				<div id="legs" class="exer">
+				<div id="legs" class="exer toShow">
 					<div id="legsMain" class="exerColumns">
 						<div class="exerPhoto">
 							<img src="Photos/LegsPhoto1.jpg" alt="Legs exercise" />
 						</div>
-						<div class="exerText">
+						<div class="exerText center">
+							<h3>Legs</h3>
 							<p>
-								Arm exercises are an essential part of any workout routine. They
-								help to build and tone the muscles in your arms, which can
-								improve your overall strength and appearance. There are many
-								different exercises that you can do to work your arms,
-								including:
+								Leg exercises are exercises that specifically target the muscles
+								in the legs, which include the quadriceps, hamstrings, calves,
+								and glutes. These exercises are designed to strengthen and tone
+								the muscles in the lower body, which can improve overall
+								athletic performance, increase endurance, and enhance overall
+								physical appearance.
 							</p>
-							<div class="clickIcoStyle">
-								<img
-									src="Photos/clickIco.png"
-									alt="click icon"
-									class="clickIcoSize"
-								/>
-							</div>
-							<div class="infoText">*You can click the photo below*</div>
+							<p>
+								Some common types of leg exercises include squats, lunges,
+								deadlifts, leg presses, and calf raises.
+							</p>
 						</div>
 					</div>
 					<div id="legsDesc" class="displayNone">
-						<div class="hiddenDiv gallery">
+						<div class="infoText">*You can click the photo below*</div>
+						<div class="hiddenDiv gallery opaPhoto">
 							<img src="Photos/LegsPh1.jpg" />
+							<img src="Photos/LegsPh2.jpg" />
+							<img src="Photos/LegsPh3.jpg" />
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>
+			<div class="center"><img src="Photos/logoR1.png" /></div>
+			<div class="center">
+				<p>
+					Copyright &#169; TrainYourBody sp. z o.o. <br />
+					Images copyrighted by owners, no copying without permission
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>

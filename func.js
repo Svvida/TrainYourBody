@@ -9,9 +9,9 @@ const backDesc = document.querySelector("#backDesc");
 const legs = document.querySelector("#legsMain");
 const legsDesc = document.querySelector("#legsDesc");
 
+//Function to show hidden divs
 function showDiv(toClick, toShow) {
 	toClick.addEventListener("click", function () {
-		console.log(toShow.style.display);
 		if (toShow.style.display != "block") toShow.style.display = "block";
 		else toShow.style.display = "none";
 	});
@@ -42,9 +42,10 @@ function ScrollTo(from, to) {
 
 ScrollTo(aboutUs, aboutUsSection);
 ScrollTo(exercises, arms);
+
 /**************************************************/
 
-//Playing audio when clicking on p
+//Playing audio when clicking on main photo
 function audioPlay() {
 	const audio = document.getElementById("manRoarAudio");
 	audio.play();
@@ -55,19 +56,43 @@ const gallery = document.querySelectorAll(".gallery");
 const imgs = document.querySelectorAll(".gallery img");
 const fullpage = document.querySelector(".fullpage");
 
-const divTest = document.createElement("div");
+const fullPageContainer = document.createElement("div");
 
 //Hiding full size photo
-divTest.addEventListener("click", function () {
-	divTest.style.display = "none";
+fullPageContainer.addEventListener("click", function () {
+	fullPageContainer.style.display = "none";
 });
 
 //displaying full size photo
-divTest.classList.add("fullpage");
-document.body.appendChild(divTest);
+fullPageContainer.classList.add("fullpage");
+document.body.appendChild(fullPageContainer);
 imgs.forEach((img) => {
 	img.addEventListener("click", function () {
-		divTest.style.backgroundImage = "url(" + img.src + ")";
-		divTest.style.display = "block";
+		fullPageContainer.style.backgroundImage = "url(" + img.src + ")";
+		fullPageContainer.style.display = "block";
+	});
+});
+
+/**************************************************/
+//Appearing elements
+//Checking if element is visible
+function isElementVisible(element) {
+	let screen = element.getBoundingClientRect();
+	return (
+		screen.top >= 0 &&
+		screen.left >= 0 &&
+		screen.bottom <=
+			(window.innerHeight || document.documentElement.clientHeight) &&
+		screen.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+}
+
+//Adding class "ElementAppear" to all elements with class "toShow"
+const elementsToShow = document.querySelectorAll(".toShow");
+elementsToShow.forEach(function (element) {
+	window.addEventListener("scroll", function () {
+		if (isElementVisible(element)) {
+			element.classList.add("ElementAppear");
+		}
 	});
 });
